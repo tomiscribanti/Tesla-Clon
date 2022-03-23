@@ -1,0 +1,485 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+$primary: #181b21;
+$secondary: #5c5d61;
+$whiteTxt: #fff;
+$hide: none;
+
+@mixin flex ($dis, $just, $align) {
+    display:  $dis;
+    justify-content: $just;
+    align-items: $align;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    @include flex(flex, space-between, center);
+    .imgIcon {
+        height: 41px;
+    }
+    a h1 img {
+        width: 110px;
+        margin: 15px 60px;
+    }
+    ul {
+        @include flex(flex,center ,center);
+    }
+    ul li {
+        list-style: $hide;
+        margin: 15px 10px;
+    }
+    ul li a {
+        text-decoration: $hide;
+        margin: 0 20px;
+        color: $primary;    
+    }
+    .header__r {
+        ul {
+            @include flex(flex,center ,center);
+        }
+        ul li {
+            list-style: $hide;
+            margin: 10px 20px;
+            cursor: pointer;
+        }
+        ul li a {
+            text-decoration: $hide;
+            margin: 20px;
+            color: $primary;
+        }
+    }
+}
+.blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1rem);
+    z-index: 5;
+    display: none;
+    transition: .2s;
+
+}
+.blur.active {
+    display: block;
+}
+nav {
+    position: fixed;
+    height: 100vh;
+    right: -14%;
+    background-color: $whiteTxt;
+    transition: .2s;
+    width: 14%;
+    .navBarEn {
+        margin-left: 31px;
+    }
+    ul {
+        margin-top: 65px;
+    }
+    ul li a {
+        color: $primary;
+        text-decoration: $hide;
+    }
+    ul li {
+        margin-left: 30px;
+        margin-bottom: 10px;
+        list-style: $hide;
+    }
+    .closeBtn {
+        position: absolute;
+        right: 24px;
+        top: 14px;
+        cursor: pointer;
+    }
+    .closeBtn img {
+        width: 24px;
+    }
+    ul li a svg {
+        width: 30px;
+    }
+    .svgIcon {
+        display: flex;
+        align-items: center;
+    }
+}
+.show {
+    z-index: 10;
+    right: 0%;
+}
+section {
+    height: 100vh;
+    width: 100%;
+}
+.sections {
+    top: 116%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+#sectionOne {
+    background-image: url(../img/M3-Homepage-D.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .sectionOneContent {
+        top: 20%;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    .sectionOneContent h2 {
+        font-weight: bold;
+        font-size: 3rem;
+    }
+    .sectionOneContent a{
+        color: $primary;
+        text-decoration: $hide;
+    }
+    .sectionOneContent a span {
+        border-bottom: 2px solid $secondary;
+    }
+    .sectionBuy {
+        position: absolute;
+        bottom: 3%;
+        text-align: center;
+        left: 37%;
+    }
+    button:nth-child(1) {
+        background-color: $secondary;
+        color: $whiteTxt;
+    }
+    button:nth-child(2) {
+        background-color: $whiteTxt;
+        color: $primary;
+        margin-left: 30px;
+    }
+    button {
+        width: 240px;
+        border: $hide;
+        outline: $hide;
+        padding: 10px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    .bounce-arrow {
+        margin-top: 20px;
+        animation: bounce .9s infinite alternate;
+        cursor: pointer;
+    }
+    svg {
+        max-width: 24px;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+    100% {
+        transform: translateY(-3px);
+    }
+}
+
+#sectionTwo {
+    background-image: url(../img/Desktop-ModelY.jpg);
+    background-position: center center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    .sectionOneContent h2 {
+        font-weight: bold;
+        font-size: 3rem;
+    }
+    .sectionOneContent a{
+        color: $primary;
+        text-decoration: $hide;
+    }
+    button:nth-child(1) {
+        background-color: $secondary;
+        color: $whiteTxt;
+    }
+    button:nth-child(2) {
+        background-color: $whiteTxt;
+        color: $primary;
+        margin-left: 30px;
+    }
+    button {
+        width: 240px;
+        border: $hide;
+        outline: $hide;
+        padding: 10px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    .modelY {
+        position: absolute;
+        bottom: -90%;
+        text-align: center;
+        left: 37%;
+    }
+    .sectionOneContent a span {
+        border-bottom: 2px solid $secondary;
+    }
+}
+#sectionThree {
+    background-image: url(../img/ms-homepage-desktop.jpg);
+    background-position: center center;
+    background-size: cover;
+
+    .sectionOneContent h2 {
+        font-weight: bold;
+        font-size: 3rem;
+    }
+    .sectionOneContent a{
+        color: $primary;
+        text-decoration: $hide;
+    }
+    button:nth-child(1) {
+        background-color: $secondary;
+        color: $whiteTxt;
+    }
+    button:nth-child(2) {
+        background-color: $whiteTxt;
+        color: $primary;
+        margin-left: 30px;
+    }
+    button {
+        width: 240px;
+        border: $hide;
+        outline: $hide;
+        padding: 10px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    .sectionOneContent a span {
+        border-bottom: 2px solid $secondary;
+    }
+    .modelS {
+        position: absolute;
+        bottom: -190%;
+        text-align: center;
+        left: 37%;
+    }
+    .sectionsM {
+        top: 219%;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+}
+#sectionFour {
+    background-image: url(../img/ModelX-Homepage-D.jpg);
+    background-position: center center;
+    background-size: cover;
+    .sectionMX {
+        position: absolute;
+        bottom: -229%;
+        text-align: center;
+        left: 43%;
+    }
+    .sectionOneContent h2 {
+        font-weight: bold;
+        font-size: 3rem;
+    }
+    .sectionOneContent a{
+        color: $primary;
+        text-decoration: $hide;
+    }
+    button:nth-child(1) {
+        background-color: $secondary;
+        color: $whiteTxt;
+    }
+    button:nth-child(2) {
+        background-color: $whiteTxt;
+        color: $primary;
+        margin-left: 30px;
+    }
+    button {
+        width: 240px;
+        border: $hide;
+        outline: $hide;
+        padding: 10px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    .sectionOneContent a span {
+        border-bottom: 2px solid $secondary;
+    }
+    .modelX {
+            position: absolute;
+            bottom: -290%;
+            text-align: center;
+            left: 37%;
+    }
+}
+
+#sectionFive {
+    background-image: url(../img/_25-HP-SolarPanels-D.jpg);
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+
+    .modelSP {
+        position: absolute;
+        bottom: -388%;
+        text-align: center;
+        left: 37%;
+}
+    .sectionSP {
+        position: absolute;
+        bottom: -330%;
+        text-align: center;
+        left: 43%;
+    }
+    .sectionOneContent h2 {
+        font-weight: bold;
+        font-size: 3rem;
+    }
+    .sectionOneContent a{
+        color: $primary;
+        text-decoration: $hide;
+    }
+    button:nth-child(1) {
+        background-color: $secondary;
+        color: $whiteTxt;
+    }
+    button:nth-child(2) {
+        background-color: $whiteTxt;
+        color: $primary;
+        margin-left: 30px;
+    }
+    button {
+        width: 240px;
+        border: $hide;
+        outline: $hide;
+        padding: 10px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}
+#sectionSix {
+    background-image: url(../img/HP-SR-Design-D.jpg);
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    .sectionSR {
+        position: absolute;
+        bottom: -428%;
+        text-align: center;
+        left: 43%;
+    }
+    .modelSR {
+        position: absolute;
+        bottom: -490%;
+        text-align: center;
+        left: 36%;
+    }
+    .sectionOneContent h2 {
+        font-weight: bold;
+        font-size: 3rem;
+    }
+    .sectionOneContent a{
+        color: $primary;
+        text-decoration: $hide;
+    }
+    button:nth-child(1) {
+        background-color: $secondary;
+        color: $whiteTxt;
+    }
+    button:nth-child(2) {
+        background-color: $whiteTxt;
+        color: $primary;
+        margin-left: 30px;
+    }
+    button {
+        width: 240px;
+        border: $hide;
+        outline: $hide;
+        padding: 10px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}
+#sectionSeven {
+    background-image: url(../img/Desktop-Accessories.jpg);
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    .modelAC {
+        position: absolute;
+        bottom: -583%;
+        text-align: center;
+        left: 44%;
+    }
+    .sectionAC {
+        position: absolute;
+        bottom: -523%;
+        text-align: center;
+        left: 44%;
+    }
+    .sectionOneContent a{
+        color: $primary;
+        text-decoration: $hide;
+    }
+    .sectionOneContent h2 {
+        font-weight: bold;
+        font-size: 3rem;
+    }
+    button:nth-child(1) {
+        background-color: $secondary;
+        color: $whiteTxt;
+    }
+    button {
+        width: 240px;
+        border: $hide;
+        outline: $hide;
+        padding: 10px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}
+
+footer {
+    ul {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 13px;
+    }
+    ul li {
+        list-style: none;
+    }
+    ul li a {
+        text-decoration: $hide;
+        color: $secondary;
+        margin: 10px;
+        font-size: .8rem;
+    }
+}

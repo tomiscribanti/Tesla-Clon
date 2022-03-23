@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web con sass</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css"
+    integrity="sha512-4rPgyv5iG0PZw8E+oRdfN/Gq+yilzt9rQ8Yci2jJ15rAyBmF0HBE4wFjBkoB72cxBeg63uobaj1UcNt/scV93w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+    <div class="blur"></div>
+    <header>
+        <a class="imgIcon" href="index.html">
+            <h1><img src="img/tesla_logo.svg" alt="Logo de tesla"></h1>
+        </a>
+
+        <ul>
+            <li><a href="#">Model S</a></li>
+            <li><a href="#">Model 3</a></li>
+            <li><a href="#">Model X</a></li>
+            <li><a href="#">Model Y</a></li>
+            <li><a href="#">Solar Roof</a></li>
+            <li><a href="#">Solar Panels</a></li>
+        </ul>
+
+        <div class="header__r">
+            <ul>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Account</a></li>
+                <li id="menuBtn">Menu</li>
+            </ul>
+        </div>
+    </header>
+
+
+    <nav id="navbar">
+        <div class="closeBtn">
+            <img id="close" src="img/close_icon.svg" alt="Cerrar icono">
+        </div>
+
+        <ul>
+            <li class="linksResponsive"><a href="#">Model S</a></li>
+            <li class="linksResponsive"><a href="#">Model 3</a></li>
+            <li class="linksResponsive"><a href="#">Model X</a></li>
+            <li class="linksResponsive"><a href="#">Model Y</a></li>
+            <li class="linksResponsive"><a href="#">Solar Roof</a></li>
+            <li class="linksResponsive"><a href="#">Solar Panels</a></li>
+            <li><a href="#">Existing Inventory</a></li>
+            <li><a href="#">Used Inventory</a></li>
+            <li><a href="#">Trade-In</a></li>
+            <li><a href="#">Test Drive</a></li>
+            <li><a href="#">Cybertruck</a></li>
+            <li><a href="#">Roadster</a></li>
+            <li><a href="#">Semi</a></li>
+            <li><a href="#">Charging</a></li>
+            <li><a href="#">Powerwall</a></li>
+            <li><a href="#">Comercial Energy</a></li>
+            <li><a href="#">Utilities</a></li>
+            <li><a href="#">Find Us</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Charging</a></li>
+            <li><a href="#">Investor Relations</a></li>
+            <li><a href="#">Comercial Energy</a></li>
+            <li><a href="#">
+                    <div class="svgIcon">
+                        <svg class="tds-icon tds-icon-globe" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-.5 5.477a9.475 9.475 0 0 1-3.032-.66c.732-1.763 1.816-2.99 3.032-3.258v3.918zm0 1V11.5H7.514c.044-1.349.262-2.622.613-3.742 1.068.424 2.206.664 3.373.719zm0 4.023v3.023a10.475 10.475 0 0 0-3.373.719 14.132 14.132 0 0 1-.613-3.742H11.5zm0 4.023v3.918c-1.216-.268-2.3-1.495-3.032-3.258a9.475 9.475 0 0 1 3.032-.66zm1 0a9.475 9.475 0 0 1 3.032.66c-.732 1.763-1.816 2.99-3.032 3.258v-3.918zm0-1V12.5h3.986a14.132 14.132 0 0 1-.613 3.742 10.475 10.475 0 0 0-3.373-.719zm0-4.023V8.476a10.47 10.47 0 0 0 3.374-.714c.35 1.119.568 2.39.612 3.738H12.5zm0-4.024V3.56c1.217.268 2.301 1.497 3.034 3.262-.96.384-1.983.6-3.034.655zm2.582-3.389a8.5 8.5 0 0 1 2.544 1.558 9.47 9.47 0 0 1-1.168.74c-.377-.9-.84-1.681-1.376-2.298zM7.544 6.382a9.47 9.47 0 0 1-1.172-.734 8.499 8.499 0 0 1 2.546-1.561c-.535.616-.998 1.397-1.374 2.295zm-.353.948c-.396 1.237-.633 2.651-.677 4.17H3.525a8.453 8.453 0 0 1 2.129-5.135c.485.369 1.001.688 1.537.965zm-.677 5.17c.044 1.519.28 2.933.677 4.17-.536.277-1.052.596-1.537.965A8.453 8.453 0 0 1 3.525 12.5h2.99zm1.03 5.118c.376.898.839 1.679 1.374 2.295a8.5 8.5 0 0 1-2.546-1.56 9.465 9.465 0 0 1 1.172-.735zm8.912 0a9.38 9.38 0 0 1 1.172.734 8.5 8.5 0 0 1-2.546 1.561c.535-.616.998-1.397 1.374-2.295zm.353-.948c.396-1.237.633-2.651.677-4.17h2.989a8.453 8.453 0 0 1-2.129 5.135 10.468 10.468 0 0 0-1.537-.965zm.677-5.17c-.044-1.516-.28-2.93-.676-4.164a10.475 10.475 0 0 0 1.533-.975 8.452 8.452 0 0 1 2.132 5.139h-2.99z"
+                                fill="currentColor"></path>
+                        </svg><strong>United States</strong>
+                    </div>
+                    <span class="navBarEn">English</span>
+                </a></li>
+        </ul>
+
+    </nav>
+
+
+    <main id="fullpage">
+        <section id="sectionOne">
+            <div class="sectionOneContent">
+                <div class="title">
+                    <div class="scTittle">
+                        <h2>Model 3</h2>
+                    </div>
+                    <div class="scDesc">
+                        <a href="#">Order Online for <span>Touchless Delivery</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="sectionBuy">
+                <button class="btnSction">Custom Order</button>
+                <button class="btnSct">Existing Inventory</button>
+
+                <div class="bounce-arrow bounce">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
+                        <path
+                            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z" />
+                        </svg>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="sectionTwo">
+            <div class="sectionOneContent sections">
+                <div class="title">
+                    <h2>Model Y</h2>
+                    <a href="#">Order Online for <span>Touchless Delivery</span></a>
+                </div>
+            </div>
+            <div class="sectionBuy modelY">
+                <button data-model="Model Y">Custom Order</button>
+                <button>Existing Inventory</button>
+            </div>
+        </section>
+
+        <section id="sectionThree">
+            <div class="sectionOneContent sectionsM">
+                <div class="title">
+                    <h2>Model S</h2>
+                    <a href="#">Order Online for <span>Touchless Delivery</span></a>
+                </div>
+            </div>
+            <div class="sectionBuy modelS">
+                <button data-model="Model S">Custom Order</button>
+                <button>Existing Inventory</button>
+            </div>
+        </section>
+
+        <section id="sectionFour">
+            <div class="sectionOneContent sectionMX">
+                <div class="title">
+                    <h2>Model X</h2>
+                    <a href="#">Order Online for <span>Touchless Delivery</span></a>
+                </div>
+            </div>
+            <div class="sectionBuy modelX">
+                <button data-model="Model X">Custom Order</button>
+                <button>Existing Inventory</button>
+            </div>
+        </section>
+
+        <section id="sectionFive">
+            <div class="sectionOneContent sectionSP">
+                <div class="title">
+                    <h2>Solar Panels</h2>
+                    <a href="#">Lowest Cost Solar Panels in America</a>
+                </div>
+            </div>
+            <div class="sectionBuy modelSP">
+                <button data-model="Solar Panels">Order Now</button>
+                <button>Learn More</button>
+            </div>
+        </section>
+        <section id="sectionSix">
+            <div class="sectionOneContent sectionSR">
+                <div class="title">
+                    <h2>Solar Roof</h2>
+                    <a href="#">Produce Clean Energy From Your Roof</a>
+                </div>
+            </div>
+            <div class="sectionBuy modelSR">
+                <button data-model="Solar Roof">Order Now</button>
+                <button>Learn More</button>
+            </div>
+        </section>
+        <section id="sectionSeven">
+            <div class="sectionOneContent sectionAC">
+                <div class="title">
+                    <h2>Accesories</h2>
+                </div>
+            </div>
+            <div class="sectionBuy modelAC">
+                <button data-model="Accesories">Shop Now</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="#">Tesla © 2022</a></li>
+            <li><a href="#">Privacy & Legal</a></li>
+            <li><a href="#">Vehicle Recalls</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Engage</a></li>
+            <li><a href="#">Locations</a></li>
+        </ul>
+    </footer>
+
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"
+    integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+></script>
+
+    <script src="main/scrollreveal.js"></script>
+    <script src="main/script.js"></script>
+</body>
+
+</html>
