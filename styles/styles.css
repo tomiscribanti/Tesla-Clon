@@ -28,7 +28,7 @@ header ul {
 }
 header ul li {
   list-style: none;
-  margin: 15px 10px;
+  margin: 15px 0;
 }
 header ul li a {
   text-decoration: none;
@@ -42,7 +42,8 @@ header .header__r ul {
 }
 header .header__r ul li {
   list-style: none;
-  margin: 10px 20px;
+  margin-top: 10px;
+  margin-right: 20px;
   cursor: pointer;
 }
 header .header__r ul li a {
@@ -75,6 +76,9 @@ nav {
   background-color: #fff;
   transition: 0.2s;
   width: 14%;
+}
+nav .linksResponsive {
+  display: none;
 }
 nav .navBarEn {
   margin-left: 31px;
@@ -113,78 +117,36 @@ nav .svgIcon {
   right: 0%;
 }
 
-section {
+.container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
   height: 100vh;
-  width: 100%;
 }
 
-.sections {
-  top: 116%;
-  left: 50%;
-  position: absolute;
-  transform: translateX(-50%);
-  width: 100%;
-  text-align: center;
-  align-items: center;
-}
-
-#sectionOne {
-  background-image: url(../img/M3-Homepage-D.jpg);
-  background-position: center;
+section {
+  background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat;
+  height: 100vh;
+  scroll-snap-align: start;
 }
-#sectionOne .sectionOneContent {
-  top: 20%;
-  left: 50%;
-  position: absolute;
-  transform: translateX(-50%);
-  width: 100%;
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+.section-container .title-box {
+  margin-top: 123px;
   text-align: center;
-  align-items: center;
 }
-#sectionOne .sectionOneContent h2 {
-  font-weight: bold;
-  font-size: 3rem;
+.section-container .title-box .section-title {
+  font-size: 40px;
+  margin-bottom: 10px;
 }
-#sectionOne .sectionOneContent a {
-  color: #181b21;
-  text-decoration: none;
-}
-#sectionOne .sectionOneContent a span {
-  border-bottom: 2px solid #5c5d61;
-}
-#sectionOne .sectionBuy {
-  position: absolute;
-  bottom: 3%;
-  text-align: center;
-  left: 37%;
-}
-#sectionOne button:nth-child(1) {
-  background-color: #5c5d61;
-  color: #fff;
-}
-#sectionOne button:nth-child(2) {
-  background-color: #fff;
-  color: #181b21;
-  margin-left: 30px;
-}
-#sectionOne button {
-  width: 240px;
-  border: none;
-  outline: none;
-  padding: 10px;
-  border-radius: 20px;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-#sectionOne .bounce-arrow {
-  margin-top: 20px;
+
+.bounce {
   animation: bounce 0.9s infinite alternate;
-  cursor: pointer;
-}
-#sectionOne svg {
-  max-width: 24px;
 }
 
 @keyframes bounce {
@@ -198,279 +160,89 @@ section {
     transform: translateY(-3px);
   }
 }
-#sectionTwo {
-  background-image: url(../img/Desktop-ModelY.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-#sectionTwo .sectionOneContent h2 {
-  font-weight: bold;
-  font-size: 3rem;
-}
-#sectionTwo .sectionOneContent a {
-  color: #181b21;
-  text-decoration: none;
-}
-#sectionTwo button:nth-child(1) {
-  background-color: #5c5d61;
-  color: #fff;
-}
-#sectionTwo button:nth-child(2) {
-  background-color: #fff;
-  color: #181b21;
-  margin-left: 30px;
-}
-#sectionTwo button {
-  width: 240px;
-  border: none;
-  outline: none;
-  padding: 10px;
-  border-radius: 20px;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-#sectionTwo .modelY {
-  position: absolute;
-  bottom: -90%;
-  text-align: center;
-  left: 37%;
-}
-#sectionTwo .sectionOneContent a span {
-  border-bottom: 2px solid #5c5d61;
-}
-
-#sectionThree {
-  background-image: url(../img/ms-homepage-desktop.jpg);
-  background-position: center center;
-  background-size: cover;
-}
-#sectionThree .sectionOneContent h2 {
-  font-weight: bold;
-  font-size: 3rem;
-}
-#sectionThree .sectionOneContent a {
-  color: #181b21;
-  text-decoration: none;
-}
-#sectionThree button:nth-child(1) {
-  background-color: #5c5d61;
-  color: #fff;
-}
-#sectionThree button:nth-child(2) {
-  background-color: #fff;
-  color: #181b21;
-  margin-left: 30px;
-}
-#sectionThree button {
-  width: 240px;
-  border: none;
-  outline: none;
-  padding: 10px;
-  border-radius: 20px;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-#sectionThree .sectionOneContent a span {
-  border-bottom: 2px solid #5c5d61;
-}
-#sectionThree .modelS {
-  position: absolute;
-  bottom: -190%;
-  text-align: center;
-  left: 37%;
-}
-#sectionThree .sectionsM {
-  top: 219%;
-  left: 50%;
-  position: absolute;
-  transform: translateX(-50%);
-  width: 100%;
-  text-align: center;
+.bottom-section .cta-container {
+  display: flex;
+  justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
+}
+.bottom-section .cta-container .btn {
+  margin: 8px;
+  cursor: pointer;
+}
+.bottom-section .bounce-arrow {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 20px;
+}
+.bottom-section svg {
+  max-width: 24px;
+  cursor: pointer;
 }
 
-#sectionFour {
+.title-box p a {
+  color: #181b21;
+  text-decoration: none;
+  border-bottom: 1px solid #181b21;
+  transition: 0.1s;
+}
+.title-box p a:hover {
+  border-bottom: 2px solid #181b21;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 100px;
+  min-width: 256px;
+  text-transform: uppercase;
+  font-size: 12px;
+  border: none;
+  padding: 10px;
+}
+
+.btn-dark {
+  background-color: #5c5d61;
+  opacity: 0.9;
+  color: #fff;
+}
+
+.btn-light {
+  background-color: #fff;
+  color: #5c5d61;
+}
+
+.sectionOne {
+  background-image: url(../img/M3-Homepage-D.jpg);
+}
+
+.sectionTwo {
+  background-image: url(../img/Desktop-ModelY.jpg);
+}
+
+.sectionThree {
+  background-image: url(../img/ms-homepage-desktop.jpg);
+}
+
+.sectionFour {
   background-image: url(../img/ModelX-Homepage-D.jpg);
-  background-position: center center;
-  background-size: cover;
-}
-#sectionFour .sectionMX {
-  position: absolute;
-  bottom: -229%;
-  text-align: center;
-  left: 43%;
-}
-#sectionFour .sectionOneContent h2 {
-  font-weight: bold;
-  font-size: 3rem;
-}
-#sectionFour .sectionOneContent a {
-  color: #181b21;
-  text-decoration: none;
-}
-#sectionFour button:nth-child(1) {
-  background-color: #5c5d61;
-  color: #fff;
-}
-#sectionFour button:nth-child(2) {
-  background-color: #fff;
-  color: #181b21;
-  margin-left: 30px;
-}
-#sectionFour button {
-  width: 240px;
-  border: none;
-  outline: none;
-  padding: 10px;
-  border-radius: 20px;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-#sectionFour .sectionOneContent a span {
-  border-bottom: 2px solid #5c5d61;
-}
-#sectionFour .modelX {
-  position: absolute;
-  bottom: -290%;
-  text-align: center;
-  left: 37%;
 }
 
-#sectionFive {
+.sectionFive {
   background-image: url(../img/_25-HP-SolarPanels-D.jpg);
-  height: 100vh;
-  background-position: center center;
-  background-size: cover;
-}
-#sectionFive .modelSP {
-  position: absolute;
-  bottom: -388%;
-  text-align: center;
-  left: 37%;
-}
-#sectionFive .sectionSP {
-  position: absolute;
-  bottom: -330%;
-  text-align: center;
-  left: 43%;
-}
-#sectionFive .sectionOneContent h2 {
-  font-weight: bold;
-  font-size: 3rem;
-}
-#sectionFive .sectionOneContent a {
-  color: #181b21;
-  text-decoration: none;
-}
-#sectionFive button:nth-child(1) {
-  background-color: #5c5d61;
-  color: #fff;
-}
-#sectionFive button:nth-child(2) {
-  background-color: #fff;
-  color: #181b21;
-  margin-left: 30px;
-}
-#sectionFive button {
-  width: 240px;
-  border: none;
-  outline: none;
-  padding: 10px;
-  border-radius: 20px;
-  text-transform: uppercase;
-  cursor: pointer;
 }
 
-#sectionSix {
+.sectionSix {
   background-image: url(../img/HP-SR-Design-D.jpg);
-  height: 100vh;
-  background-position: center center;
-  background-size: cover;
-}
-#sectionSix .sectionSR {
-  position: absolute;
-  bottom: -428%;
-  text-align: center;
-  left: 43%;
-}
-#sectionSix .modelSR {
-  position: absolute;
-  bottom: -490%;
-  text-align: center;
-  left: 36%;
-}
-#sectionSix .sectionOneContent h2 {
-  font-weight: bold;
-  font-size: 3rem;
-}
-#sectionSix .sectionOneContent a {
-  color: #181b21;
-  text-decoration: none;
-}
-#sectionSix button:nth-child(1) {
-  background-color: #5c5d61;
-  color: #fff;
-}
-#sectionSix button:nth-child(2) {
-  background-color: #fff;
-  color: #181b21;
-  margin-left: 30px;
-}
-#sectionSix button {
-  width: 240px;
-  border: none;
-  outline: none;
-  padding: 10px;
-  border-radius: 20px;
-  text-transform: uppercase;
-  cursor: pointer;
 }
 
-#sectionSeven {
+.sectionSeven {
   background-image: url(../img/Desktop-Accessories.jpg);
-  height: 100vh;
-  background-position: center center;
-  background-size: cover;
-}
-#sectionSeven .modelAC {
-  position: absolute;
-  bottom: -583%;
-  text-align: center;
-  left: 44%;
-}
-#sectionSeven .sectionAC {
-  position: absolute;
-  bottom: -523%;
-  text-align: center;
-  left: 44%;
-}
-#sectionSeven .sectionOneContent a {
-  color: #181b21;
-  text-decoration: none;
-}
-#sectionSeven .sectionOneContent h2 {
-  font-weight: bold;
-  font-size: 3rem;
-}
-#sectionSeven button:nth-child(1) {
-  background-color: #5c5d61;
-  color: #fff;
-}
-#sectionSeven button {
-  width: 240px;
-  border: none;
-  outline: none;
-  padding: 10px;
-  border-radius: 20px;
-  text-transform: uppercase;
-  cursor: pointer;
 }
 
 footer ul {
   display: flex;
   justify-content: center;
-  margin-bottom: 13px;
+  margin-bottom: 10px;
 }
 footer ul li {
   list-style: none;
@@ -480,6 +252,37 @@ footer ul li a {
   color: #5c5d61;
   margin: 10px;
   font-size: 0.8rem;
+}
+
+@media (max-width: 1200px) {
+  nav .linksResponsive {
+    display: block;
+  }
+
+  .responsiveLink {
+    display: none;
+  }
+
+  nav {
+    width: 33%;
+    right: -33%;
+  }
+
+  #menuBtn {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 100px;
+    padding: 5px 3px;
+  }
+}
+@media (max-width: 767px) {
+  .cta-container {
+    flex-direction: column;
+  }
+
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

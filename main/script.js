@@ -2,6 +2,8 @@ const menuBtn = document.getElementById('menuBtn');
 const navBar = document.getElementById('navbar');
 const closeBtn = document.getElementById('close');
 const blurNav = document.querySelector('.blur');
+const btnModel = document.querySelectorAll('#btnModelBuy');
+
 
 menuBtn.addEventListener('click', function() {
     navBar.classList.add('show');
@@ -53,8 +55,3 @@ sr.reveal('.bounce-arrow', {
     mobile: true,
     reset: true
 });
-
-new fullpage('#fullpage', {
-	autoScrolling: true,
-	scrollBar: true,
-})

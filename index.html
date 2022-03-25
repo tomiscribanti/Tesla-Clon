@@ -6,13 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web con sass</title>
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css"
-    integrity="sha512-4rPgyv5iG0PZw8E+oRdfN/Gq+yilzt9rQ8Yci2jJ15rAyBmF0HBE4wFjBkoB72cxBeg63uobaj1UcNt/scV93w=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
@@ -26,19 +19,19 @@
         </a>
 
         <ul>
-            <li><a href="#">Model S</a></li>
-            <li><a href="#">Model 3</a></li>
-            <li><a href="#">Model X</a></li>
-            <li><a href="#">Model Y</a></li>
-            <li><a href="#">Solar Roof</a></li>
-            <li><a href="#">Solar Panels</a></li>
+            <li class="responsiveLink"><a href="#">Model 3</a></li>
+            <li class="responsiveLink"><a href="#">Model S</a></li>
+            <li class="responsiveLink"><a href="#">Model X</a></li>
+            <li class="responsiveLink"><a href="#">Model Y</a></li>
+            <li class="responsiveLink"><a href="#">Solar Roof</a></li>
+            <li class="responsiveLink"><a href="#">Solar Panels</a></li>
         </ul>
 
         <div class="header__r">
             <ul>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Account</a></li>
-                <li id="menuBtn">Menu</li>
+                <li class="responsiveLink"><a href="#">Shop</a></li>
+                <li class="responsiveLink"><a href="#">Account</a></li>
+                <li id="menuBtn"><a href="#">Menu</a></li>
             </ul>
         </div>
     </header>
@@ -87,127 +80,141 @@
     </nav>
 
 
-    <main id="fullpage">
-        <section id="sectionOne">
-            <div class="sectionOneContent">
-                <div class="title">
-                    <div class="scTittle">
-                        <h2>Model 3</h2>
+    <main>
+        <div class="container">
+            <section class="sectionOne">
+                <div class="section-container">
+                    <div class="title-box">
+                        <h2 class="section-title">Model 3</h2>
+                        <p>order online for <a href="#">Touchless delivery</a></p>
                     </div>
-                    <div class="scDesc">
-                        <a href="#">Order Online for <span>Touchless Delivery</span></a>
+
+                    <div class="bottom-section">
+                        <div class="cta-container">
+                            <button data-model="Model 3" id="btnModelBuy" class="btn btn-dark">custom order</button>
+                            <button class="btn btn-light">existing inveryory</button>
+                        </div>
+
+                        <div class="bounce-arrow bounce">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
+                                <path
+                                    d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="sectionBuy">
-                <button class="btnSction">Custom Order</button>
-                <button class="btnSct">Existing Inventory</button>
+            </section>
 
-                <div class="bounce-arrow bounce">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                        <!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
-                        <path
-                            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z" />
-                        </svg>
-                </div>
-            </div>
+            <section class="sectionTwo">
+                <div class="section-container">
+                    <div class="title-box">
+                        <h2 class="section-title">Model Y</h2>
+                        <p>order online for <a href="#">Touchless delivery</a></p>
+                    </div>
 
-        </section>
+                    <div class="bottom-section">
+                        <div class="cta-container">
+                            <button data-model="Model Y" id="btnModelBuy" class="btn btn-dark">custom order</button>
+                            <button class="btn btn-light">existing inveryory</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <section id="sectionTwo">
-            <div class="sectionOneContent sections">
-                <div class="title">
-                    <h2>Model Y</h2>
-                    <a href="#">Order Online for <span>Touchless Delivery</span></a>
+            <section class="sectionThree">
+                <div class="section-container">
+                    <div class="title-box">
+                        <h2 class="section-title">Model S</h2>
+                        <p>order online for <a href="#">Touchless delivery</a></p>
+                    </div>
+                    <div class="bottom-section">
+                        <div class="cta-container">
+                            <button data-model="Model S" id="btnModelBuy" class="btn btn-dark">custom order</button>
+                            <button class="btn btn-light">existing inveryory</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="sectionBuy modelY">
-                <button data-model="Model Y">Custom Order</button>
-                <button>Existing Inventory</button>
-            </div>
-        </section>
+            </section>
 
-        <section id="sectionThree">
-            <div class="sectionOneContent sectionsM">
-                <div class="title">
-                    <h2>Model S</h2>
-                    <a href="#">Order Online for <span>Touchless Delivery</span></a>
+            <section class="sectionFour">
+                <div class="section-container">
+                    <div class="title-box">
+                        <h2 class="section-title">Model X</h2>
+                        <p>order online for <a href="#">Touchless delivery</a></p>
+                    </div>
+                    <div class="bottom-section">
+                        <div class="cta-container">
+                            <button data-model="Model X" id="btnModelBuy" class="btn btn-dark">custom order</button>
+                            <button class="btn btn-light">existing inveryory</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="sectionBuy modelS">
-                <button data-model="Model S">Custom Order</button>
-                <button>Existing Inventory</button>
-            </div>
-        </section>
 
-        <section id="sectionFour">
-            <div class="sectionOneContent sectionMX">
-                <div class="title">
-                    <h2>Model X</h2>
-                    <a href="#">Order Online for <span>Touchless Delivery</span></a>
-                </div>
-            </div>
-            <div class="sectionBuy modelX">
-                <button data-model="Model X">Custom Order</button>
-                <button>Existing Inventory</button>
-            </div>
-        </section>
+            </section>
 
-        <section id="sectionFive">
-            <div class="sectionOneContent sectionSP">
-                <div class="title">
-                    <h2>Solar Panels</h2>
-                    <a href="#">Lowest Cost Solar Panels in America</a>
+            <section class="sectionFive">
+                <div class="section-container">
+                    <div class="title-box">
+                        <h2 class="section-title">Solar Panels</h2>
+                        <p>Lowest Cost Solar Panels in America</p>
+                    </div>
+                    <div class="bottom-section">
+                        <div class="cta-container">
+                            <button class="btn btn-dark">order now</button>
+                            <button class="btn btn-light">learn more</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="sectionBuy modelSP">
-                <button data-model="Solar Panels">Order Now</button>
-                <button>Learn More</button>
-            </div>
-        </section>
-        <section id="sectionSix">
-            <div class="sectionOneContent sectionSR">
-                <div class="title">
-                    <h2>Solar Roof</h2>
-                    <a href="#">Produce Clean Energy From Your Roof</a>
+            </section>
+
+            <section class="sectionSix">
+                <div class="section-container">
+                    <div class="title-box">
+                        <h2 class="section-title">Solar Roof</h2>
+                        <p>Produce Clean Energy From Your Roof</p>
+                    </div>
+                    <div class="bottom-section">
+                        <div class="cta-container">
+                            <button class="btn btn-dark">order now</button>
+                            <button class="btn btn-light">learn more</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="sectionBuy modelSR">
-                <button data-model="Solar Roof">Order Now</button>
-                <button>Learn More</button>
-            </div>
-        </section>
-        <section id="sectionSeven">
-            <div class="sectionOneContent sectionAC">
-                <div class="title">
-                    <h2>Accesories</h2>
+            </section>
+
+            <section class="sectionSeven">
+                <div class="section-container">
+                    <div class="title-box">
+                        <h2 class="section-title">Accesories</h2>
+                    </div>
+                    <div class="bottom-section">
+                        <div class="cta-container">
+                            <button class="btn btn-dark">Shop Now</button>
+                        </div>
+
+                        <footer>
+                            <ul>
+                                <li><a href="#">Tesla © 2022</a></li>
+                                <li><a href="#">Privacy & Legal</a></li>
+                                <li><a href="#">Vehicle Recalls</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">News</a></li>
+                                <li><a href="#">Engage</a></li>
+                                <li><a href="#">Locations</a></li>
+                            </ul>
+                        </footer>
+                    </div>
                 </div>
-            </div>
-            <div class="sectionBuy modelAC">
-                <button data-model="Accesories">Shop Now</button>
-            </div>
-        </section>
+
+            </section>
+        </div>
+
     </main>
 
-    <footer>
-        <ul>
-            <li><a href="#">Tesla © 2022</a></li>
-            <li><a href="#">Privacy & Legal</a></li>
-            <li><a href="#">Vehicle Recalls</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Engage</a></li>
-            <li><a href="#">Locations</a></li>
-        </ul>
-    </footer>
 
-    <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"
-    integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-></script>
+
 
     <script src="main/scrollreveal.js"></script>
     <script src="main/script.js"></script>
