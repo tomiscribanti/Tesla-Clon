@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web con sass</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
@@ -86,13 +85,17 @@
                 <div class="section-container">
                     <div class="title-box">
                         <h2 class="section-title">Model 3</h2>
-                        <p>order online for <a href="#">Touchless delivery</a></p>
+                            <p>order online for <a href="#" >Touchless delivery</a></p>
                     </div>
 
                     <div class="bottom-section">
                         <div class="cta-container">
-                            <button data-model="Model 3" id="btnModelBuy" class="btn btn-dark">custom order</button>
-                            <button class="btn btn-light">existing inveryory</button>
+                            <div class="container__btnDark">
+                                <button class="btn btn-dark" >custom order</button>
+                            </div>
+                            <div class="container__btnLight">
+                                <button class="btn btn-light">existing inveryory</button>
+                            </div>
                         </div>
 
                         <div class="bounce-arrow bounce">
@@ -115,7 +118,7 @@
 
                     <div class="bottom-section">
                         <div class="cta-container">
-                            <button data-model="Model Y" id="btnModelBuy" class="btn btn-dark">custom order</button>
+                            <button class="btn btn-dark">custom order</button>
                             <button class="btn btn-light">existing inveryory</button>
                         </div>
                     </div>
@@ -130,7 +133,7 @@
                     </div>
                     <div class="bottom-section">
                         <div class="cta-container">
-                            <button data-model="Model S" id="btnModelBuy" class="btn btn-dark">custom order</button>
+                            <button class="btn btn-dark">custom order</button>
                             <button class="btn btn-light">existing inveryory</button>
                         </div>
                     </div>
@@ -145,7 +148,7 @@
                     </div>
                     <div class="bottom-section">
                         <div class="cta-container">
-                            <button data-model="Model X" id="btnModelBuy" class="btn btn-dark">custom order</button>
+                            <button class="btn btn-dark">custom order</button>
                             <button class="btn btn-light">existing inveryory</button>
                         </div>
                     </div>
@@ -215,8 +218,6 @@
 
 
 
-
-    <script src="main/scrollreveal.js"></script>
     <script src="main/script.js"></script>
 </body>
 
