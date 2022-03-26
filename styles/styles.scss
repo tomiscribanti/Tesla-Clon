@@ -203,7 +203,8 @@ section {
     min-width: 256px;
     text-transform: uppercase;
     font-size: 12px;
-    border: none;
+    text-decoration: $hide;
+    text-align: center;
     padding: 10px;
 }
 .btn-dark {
@@ -266,7 +267,7 @@ footer {
     #menuBtn {
         background-color: hsla(0,0%,0%,.05);
         border-radius: 100px;
-        margin: 5px 3px;
+        margin: 11px 3px;
     }
 }
 
@@ -284,12 +285,14 @@ footer {
 }
 @media (max-width: 580px) {
     nav {
+        overflow-y: auto;
         width: 44%;
         right: -44%;
     }
 }
 @media (max-width: 410px) {
     nav {
+        overflow-y: auto;
         width: 55%;
         right: -55%;
     }
